@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
+  <title>Name</title>
 </head>
 <body>
-  <h1>Click on your name/picture</h1>
-  <ul>
+  <h1>Click on your name</h1>
     {{#each children}}
-    <li>{{name}} {{profile_photo}}</li>
+    <a href= "/choice/{{id}}">{{name}} {{profile_photo}}</a><br>
     {{/each}}
-  </ul>
+    <br>
+    <a href="/">Home</a>
 </body>
 </html>
