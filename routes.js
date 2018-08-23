@@ -5,7 +5,7 @@ const db = require('./db')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.send("Still working on this page!")
+    res.render('home')
 })
 
 router.get('/child', (req, res) => {
