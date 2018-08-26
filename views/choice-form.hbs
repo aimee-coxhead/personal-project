@@ -7,13 +7,54 @@
   <title>choices</title>
 </head>
 <body>
-  <h1>Click on your first choice</h1>
-    <form action="/choice_completed" method="post">
-    <button>option one</button>
-    <button>option two</button>
-    <button>option three</button>
-    <button>option four</button>
-    <button>option five</button>
+  <h1>Title</h1>
+    <form action="/choice/:id" method="post">
+    <label>Option One</label>
+      <select name="optionOne">
+        <option value="wordWork">Word Work</option>
+        <option value="workOnWriting">Work On Witing</option>
+        <option value="ListenToReading">Listen To Reading</option>
+        <option value="ReadToSelf">Read To Self</option>
+        <option value="ReadToSomeone">Read To Someone</option>
+        </select>
+        <br>
+      <label>Option Two</label>
+        <select name="optionThree">
+        <option value="wordWork">Word Work</option>
+        <option value="workOnWriting">Work On Witing</option>
+        <option value="ListenToReading">Listen To Reading</option>
+        <option value="ReadToSelf">Read To Self</option>
+        <option value="ReadToSomeone">Read To Someone</option>
+         </select>
+         <br>
+      <label>Option Three</label>
+      <select name="optionFour">
+        <option value="wordWork">Word Work</option>
+        <option value="workOnWriting">Work On Witing</option>
+        <option value="ListenToReading">Listen To Reading</option>
+        <option value="ReadToSelf">Read To Self</option>
+        <option value="ReadToSomeone">Read To Someone</option>
+         </select>
+         <br>
+      <label>Option Four</label>
+      <select name="optionFive">
+        <option value="wordWork">Word Work</option>
+        <option value="workOnWriting">Work On Witing</option>
+        <option value="ListenToReading">Listen To Reading</option>
+        <option value="ReadToSelf">Read To Self</option>
+        <option value="ReadToSomeone">Read To Someone</option>
+        </select>
+        <br>
+      <label>Option Five</label>
+      <select name="optionFive">
+        <option value="wordWork">Word Work</option>
+        <option value="workOnWriting">Work On Witing</option>
+        <option value="ListenToReading">Listen To Reading</option>
+        <option value="ReadToSelf">Read To Self</option>
+        <option value="ReadToSomeone">Read To Someone</option>
+      </select>
+      <br>
+      <button>Submit</button>
   </form>
 </body>
 </html>
