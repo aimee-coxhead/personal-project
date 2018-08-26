@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
     res.render('home')
 })
 
+router.get('/timetable-display', (req, res) => {
+  res.render('timetable-display')
+})
+
 router.get('/child', (req, res) => {
     db.getChildren()
       .then(displayChildren)

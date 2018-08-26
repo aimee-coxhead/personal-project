@@ -3,7 +3,8 @@ const config = require('./knexfile').development
 const conn = knex(config)
 
 module.exports = {
-    getChildren
+    getChildren,
+    timetable
 }
 
 
@@ -11,3 +12,7 @@ function getChildren () {
     return conn('children').select()
   }
   
+
+  function timetable () {
+      
+  }
