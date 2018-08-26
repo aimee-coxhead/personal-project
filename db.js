@@ -26,7 +26,6 @@ function getTimetableId (id) {
 }
 
 function updateTimetable (id, formData) {
-  console.log(id)
    return conn('timetable')
    .where('id', id)
    .update({

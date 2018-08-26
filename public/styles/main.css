@@ -1,11 +1,12 @@
 body {
-background-color: aquamarine;
+background-color: #EAE7DC;
 text-align: center;
 }
 
 h1 {
   font-size: 80px;
-  color:purple;
+  color: #E8574F;
+  font-family: 'Jua', sans-serif;
  }
 
  img {
