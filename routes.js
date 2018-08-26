@@ -35,12 +35,19 @@ router.get('/child', (req, res) => {
 })
 
 router.get('/choice/:id', (req, res) => {
-  res.render('choice-form')
+  res.render('choice-form', {id: req.params.id})
 })
 
-/* router.post('/choice/:id', (req, res) => {
+router.post('/choice-completed', (req, res) => {
   const timetableData = req.body
-  db.newTimetable(timetableData)
-}) */
+  db.getTimetableId(timetableData.id)
+  .then((timetable_Id) => db.updateTimetable(timetable_Id[0].timetable_Id, req.body))
+  .then(() => {
+    res.redirect('/timetable-display')
+  })
+  .catch(err => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+})
 
 module.exports = router
