@@ -8,6 +8,18 @@ router.get('/', (req, res) => {
   res.render('home')
 })
 
+router.get('/home', (req, res) => {
+  res.render('index')
+})
+
+router.get('/teacher', (req, res) => {
+  res.render('teacher')
+})
+
+router.get('/student', (req, res) => {
+  res.render('student')
+})
+
 router.get('/timetable-display', (req, res) => {
   db.getTimetable()
     .then(timetable => {
