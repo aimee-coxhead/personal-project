@@ -20,6 +20,24 @@ router.get('/student', (req, res) => {
   res.render('student')
 })
 
+router.get('/addStudent', (req, res) => {
+  res.render('addStudent')
+})
+
+router.get('/listenToReading', (req, res) => {
+  res.render('listenToReading')
+})
+
+router.post('/addstudentCompleted', (req, res) => {
+  const student = req.body
+  db.addStudent(student)
+  .then({
+    })
+    .catch(err => {
+      res.status(500).send('Database Error: ' + err.message)
+    })
+})
+
 router.get('/timetable-display', (req, res) => {
   db.getTimetable()
     .then(timetable => {

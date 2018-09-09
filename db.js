@@ -6,7 +6,8 @@ module.exports = {
   getChildren,
   getTimetable,
   getTimetableId,
-  updateTimetable
+  updateTimetable, 
+  addStudent
 }
 
 function getChildren () {
@@ -17,6 +18,11 @@ function getTimetable () {
   return conn('children')
     .join('timetable', 'children.timetable_Id', 'timetable.id')
     .select()
+}
+
+function addStudent (students, testDb) {
+  const db = testDb || connection
+  return db('students').insert()
 }
 
 function getTimetableId (id) {

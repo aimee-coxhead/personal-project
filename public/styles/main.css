@@ -9,8 +9,7 @@ h1 {
   font-family: 'Jua', sans-serif;
  }
 
- img {
-  border-radius: 50%;
+img {
   max-width:100px;
   max-height: 100px;
 }
